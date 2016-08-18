@@ -2,7 +2,7 @@ local action = function(msg, blocks, ln)
 	
 	if msg.chat.type == 'private' then return end
 	
-	if blocks[1] == 'extra' then
+	if blocks[1] == 'setcmd' then
 		if not is_mod(msg) then return end
 		if not blocks[2] then return end
 		if not blocks[3] and not msg.reply then return end
@@ -37,7 +37,7 @@ local action = function(msg, blocks, ln)
 				api.editMessageText(msg.chat.id, msg_id, make_text(lang[ln].extra.setted, blocks[2]), false)
     		end
     	end
-	elseif blocks[1] == 'extra list' then
+	elseif blocks[1] == 'commands' then
 	    if not is_mod(msg) then return end
 	    
 	    local hash = 'chat:'..msg.chat.id..':extra'
@@ -52,7 +52,7 @@ local action = function(msg, blocks, ln)
 	        local out = make_text(lang[ln].extra.commands_list, text)
 	        api.sendReply(msg, out, true)
 	    end
-    elseif blocks[1] == 'extra del' then
+    elseif blocks[1] == 'delcmd' then
         if not is_mod(msg) then return end
 	    
 	    local hash = 'chat:'..msg.chat.id..':extra'
@@ -103,11 +103,11 @@ end
 return {
 	action = action,
 	triggers = {
-		'^/(extra)$',
-		'^/(extra) (#[%w_]*)%s(.*)$',
-		'^/(extra) (#[%w_]*)',
-		'^/(extra del) (#[%w_]*)$',
-		'^/(extra list)$',
-		'^(#[%w_]*)$'
+		'^/(setcmd)$',
+		'^/(stcmd) ([#/!][%w_]*)%s(.*)$',
+		'^/(setcmd) ([#/!][%w_]*)',
+		'^/(delcmd) ([#/!][%w_]*)$',
+		'^/(commands)$',
+		'^([#/!][%w_]*)$'
 	}
 }
