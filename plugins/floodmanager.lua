@@ -71,11 +71,11 @@ local function action(msg, blocks, ln)
     if not msg.cb then
         if not is_mod(msg) then return end
         if blocks[1]:match('%d%d?') then
-            if tonumber(blocks[1]) < 4 or tonumber(blocks[1]) > 25 then
+            if tonumber(blocks[1]) < 2 or tonumber(blocks[1]) > 45 then
 				api.sendReply(msg, make_text(lang[ln].floodmanager.number_invalid, blocks[1]), true)
 			else
 	    	    local new = tonumber(blocks[1])
-	    	    local old = tonumber(db:hget('chat:'..msg.chat.id..':flood', 'MaxFlood')) or 5
+	    	    local old = tonumber(db:hget('chat:'..msg.chat.id..':flood', 'MaxFlood')) or 4
 	    	    if new == old then
 	            	api.sendReply(msg, make_text(lang[ln].floodmanager.not_changed, new), true)
 	    	    else
@@ -143,8 +143,8 @@ end
 return {
     action = action,
     triggers = {
-        '^/antiflood$',
-        '^/antiflood (%d%d?)$',
+        '^/setflood$',
+        '^/setflood (%d%d?)$',
         '^###cb:flood:(alert):(%w+)$',
         '^###cb:flood:(status):(-%d+)$',
         '^###cb:flood:(action):(-%d+)$',
