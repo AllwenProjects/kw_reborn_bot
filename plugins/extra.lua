@@ -104,9 +104,9 @@ return {
 	action = action,
 	triggers = {
 		'^/(setcmd)$',
-		'^/(stcmd) ([#/!][%w_]*)%s(.*)$',
-		'^/(setcmd) ([#/!][%w_]*)',
-		'^/(delcmd) ([#/!][%w_]*)$',
+		'^/(stcmd) (#[%w_]*)%s(.*)$',
+		'^/(setcmd) (#[%w_]*)',
+		'^/(delcmd) (#[%w_]*)$',
 		'^/(commands)$',
 		'^([#/!][%w_]*)$'
 	}
