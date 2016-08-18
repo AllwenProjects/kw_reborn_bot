@@ -3,10 +3,10 @@ return {
 	version = '3.1', -- /aupdate for v3.1
 	testing_mode = false,
 	admin = {
-		owner = 169371828,
+		owner = 107775857,
 		admins = {
-			[169371828] = true,
-			[107775857] = true
+			[107775857] = true,
+			[169371828] = true
 		}
 	},
 	log_chat = -1001079986953,
@@ -24,7 +24,6 @@ return {
 		'service.lua',
 		'links.lua',
 		'warn.lua',
-		'extra.lua',
 		'setlang.lua',
 		'floodmanager.lua',
 		'mediasettings.lua',
