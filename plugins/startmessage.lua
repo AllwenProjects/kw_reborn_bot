@@ -66,29 +66,17 @@ local function do_keyboard_private()
     local keyboard = {}
     keyboard.inline_keyboard = {
      {
-      {text = '👥 اد در گروه', url = 'https://telegram.me/'..bot.username..'?startgroup=new'},
+      {text = '💡 اضافه کردن ربات در گروه', url = 'https://telegram.me/'..bot.username..'?startgroup=new'},
+     },
+      {text = '⚄ رای دادن به ربات', url = 'https://telegram.me/storebot?start='..bot.username'},
+      {text = '⛾ رای دادن به ربات', url = 'https://telegram.me/keywordch/2'},
             },
+     {
+         {text = '♾ پشتیبانی رسمی', url = 'https://telegram.me/joinchat/ChhotD9mfPqPZByA3yaQ-Q'},
+     },
             {
-      {text = '👤 ایدی ادمین', url = 'https://telegram.me/Arian721'},
-     },
-     {
-      {text = '📣 کانال ما', url = 'https://telegram.me/keywordch'},
-     },
-     {
-         {text = '🐳 همه دستورات گروه', callback_data = '!user'},
-     },
-     {
-         {text = '🎩 گروه ساپورت', url = 'https://telegram.me/joinchat/ChhotD9mfPqPZByA3yaQ-Q'},
-     },
-     {
-      {text = '🏇 لینک های مفید', callback_data = '!info_button'},
+          {text = '🖥 راهنما', callback_data = '!home'},
             },
-            {
-          {text = 'ℹ اطلاعات بیشتر', callback_data = '!home'},
-            },
-            {
-          {text = '✅ چت با ادمین', callback_data = '/chat'}
-            }
     }
     return keyboard
 end
