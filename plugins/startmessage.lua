@@ -68,7 +68,7 @@ local function do_keyboard_private()
      {
       {text = '💡 اضافه کردن ربات در گروه', url = 'https://telegram.me/'..bot.username..'?startgroup=new'},
      },
-      {text = '⚄ رای دادن به ربات', url = 'https://telegram.me/storebot?start='..bot.username'},
+      {text = '⚄ رای دادن به ربات', url = 'https://telegram.me/storebot?start='..bot.username},
       {text = '⛾ رای دادن به ربات', url = 'https://telegram.me/keywordch/2'},
             },
      {
