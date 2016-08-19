@@ -76,7 +76,7 @@ local function do_keyboard_private()
      },
             {
           {text = '🖥 راهنما', callback_data = '!home'},
-            },
+            }
     }
     return keyboard
 end
