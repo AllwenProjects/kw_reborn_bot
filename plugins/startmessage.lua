@@ -76,7 +76,7 @@ local function do_keyboard_private()
          {text = '♾ پشتیبانی رسمی', url = 'https://telegram.me/joinchat/ChhotD9mfPqPZByA3yaQ-Q'},
      },
             {
-          {text = '🖥 راهنما', callback_data = '!home'},
+          {text = '🖥 راهنما', callback_data = '!mod'},
             }
     }
     return keyboard
